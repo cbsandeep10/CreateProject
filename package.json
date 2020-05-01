@@ -1,0 +1,53 @@
+{
+  "name": "create",
+  "description": "Create New Project",
+  "version": "1.0.0",
+  "author": "Sandeep @cbsandeep10",
+  "bin": {
+    "create": "./bin/run"
+  },
+  "bugs": "https://github.com/cbsandeep10/CreateProject/issues",
+  "dependencies": {
+    "@oclif/command": "^1.5.20",
+    "@oclif/config": "^1.15.1",
+    "@oclif/plugin-help": "^2.2.3",
+    "chalk": "^4.0.0",
+    "dotenv": "^8.2.0",
+    "execa": "^4.0.0",
+    "listr": "^0.14.3",
+    "node-fetch": "^2.6.0",
+    "ora": "^4.0.4"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1.22.2",
+    "@oclif/test": "^1.2.5",
+    "chai": "^4.2.0",
+    "eslint": "^5.16.0",
+    "eslint-config-oclif": "^3.1.0",
+    "mocha": "^5.2.0",
+    "nyc": "^14.1.1"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/src"
+  ],
+  "homepage": "https://github.com/cbsandeep10/CreateProject",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "oclif": {
+    "bin": "create"
+  },
+  "repository": "cbsandeep10/CreateProject",
+  "scripts": {
+    "posttest": "eslint .",
+    "prepack": "oclif-dev readme",
+    "test": "nyc mocha --forbid-only \"test/**/*.test.js\"",
+    "version": "oclif-dev readme && git add README.md"
+  }
+}
