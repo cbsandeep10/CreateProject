@@ -39,7 +39,7 @@ class CreateCommand extends Command {
     if(flags.instance){
         const spinner = ora(chalk.blue('Creating instance '+args.name)).start();
         execa('gcloud', ['compute', 'instances', 'create', args.name,
-            '--zone=us-central1-a', '--machine-type=n1-standard-2', '--image=ubuntu-1604-xenial-v20200429'])
+            '--zone=us-central1-a', '--machine-type=n1-standard-2', '--image=ubuntu-1604-xenial-v20200429', '--image-project=ubuntu-os-cloud'])
             .then((output) => {
                 spinner.succeed(chalk.green('Created instance '+args.name))
                 console.log(output.stdout);
