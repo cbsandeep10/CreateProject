@@ -50,7 +50,7 @@ class CreateCommand extends Command {
             })
     }else if (flags.project) {
         const dir = path.join(process.env.PROJECT_DIR, args.name);
-        const readme = path.join(dir, "README.md");
+        const readme = path.join(dir, "README");
         const gitignore = path.join(dir, ".gitignore");
         const gitrepo = process.env.GITHUB_URL + args.name
         const body = {
